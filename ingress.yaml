@@ -10,7 +10,7 @@ spec:
   tls:
     - hosts:
         - 'nyancat.kcd.sikademo.com'
-      secretName: nginx-tls
+      secretName: nyancat-tls
   rules:
     - host: 'nyancat.kcd.sikademo.com'
       http:
