@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nyancat
+  namespace: kcd
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: nyancat
+  template:
+    metadata:
+      labels:
+        app: nyancat
+    spec:
+      containers:
+        - name: nyancat
+          image: docker.io/huspekjtmcz/kcd-2024-nyan-cat:v0.1
+          ports:
+            - containerPort: 80
